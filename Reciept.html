@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reciept</title>
+    <link rel="stylesheet" href="Reciept.css">
+</head>
+<body>
+
+    <div id="receipt">
+
+    <div class="header">
+        <h1>TRADE UNION</h1>
+        <p>Professional Trading Services</p>
+        <p>Phone: 09137047022</p>
+        <p>Email: joshlee80250@gmail.com</p>
+    </div>
+
+    <hr>
+
+    <h2 class="title">PAYMENT RECEIPT</h2>
+
+    <div class="details">
+
+        <div>
+            <strong>Receipt No:</strong>
+            <span id="receiptNo">RCT-001</span>
+        </div>
+
+        <div>
+            <strong>Date:</strong>
+            <span id="receiptDate">30/06/2026</span>
+        </div>
+
+    </div>
+
+    <div class="customer">
+
+        <p><strong>Customer:</strong> <span id="customerName"></span></p>
+
+        <p><strong>Phone:</strong> <span id="customerPhone"></span></p>
+
+    </div>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Description</th>
+                <th>Qty</th>
+                <th>Amount</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td id="description"></td>
+
+                <td id="qty"></td>
+
+                <td>₦<span id="amount"></span></td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="summary">
+
+        <div>
+            <span>Subtotal</span>
+            <span>₦<span id="subtotal"></span></span>
+        </div>
+
+        <div>
+            <span>Discount</span>
+            <span>₦<span id="discount">0</span></span>
+        </div>
+
+        <div class="grand">
+
+            <span>Total Paid</span>
+
+            <span>₦<span id="totalPaid"></span></span>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+
+        <p><strong>Payment Status:</strong> PAID ✅</p>
+
+        <p>Thank you for choosing US.</p>
+
+    </div>
+
+</div>
+
+<button id="downloadReceipt">
+    Download Receipt
+</button>
+
+<div id="successPopup" class="popup">
+    <div class="popup-content">
+        <span class="check">✔</span>
+        <h3>Success!</h3>
+        <p>Invoice saved successfully.</p>
+        <button id="closePopup">OK</button>
+    </div>
+</div>
+
+
+<script src="Reciept.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    
+</body>
+</html>

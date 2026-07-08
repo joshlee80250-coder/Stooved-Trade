@@ -1,0 +1,559 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background:var(--Background);
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.sub{
+    width: 20px;
+    height:50px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color:black;
+    cursor: pointer;
+    display: none;
+}
+
+.button-section{
+    width: 104px;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--Primary-Brand);
+    align-items: center;
+}
+
+
+.logo{
+    width:100px ;
+    height: 45px;
+    border-bottom-right-radius: 100px;
+    overflow: hidden;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+
+
+:root{
+--Primary-Brand:#10B981;
+--Primary-Hover:#059669;
+--Secondary:#1E3A8A;
+--Accent:#F59E0B;
+--Background:#F8FAFC;
+--Cards:#FFFFFF;
+--Primary-Text:#1F2937;                   
+--Secondary-Text:#6B7280;
+--Border:#E5E7EB;                 
+--Success:#22C55E;             
+--Warning:#F97316;                      
+--Error:#EF4444;                       
+}
+
+
+.invoice{
+    font-size: 0.8rem;
+    background: var(--Primary-Brand);
+    height: 25px;
+    border: none;
+    color: var(--Cards);
+    cursor: pointer;
+    width: 90px;
+}
+
+.line.active{
+    border: 1px solid var(--Border);
+}
+
+
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-list{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: var(--Cards);
+    position:relative;
+}
+
+.search{
+    width: 160px;
+    height: 27px;
+    padding: 6px;
+    border: 1px solid black;
+    border-radius: 7px;
+    background: var(--Cards);
+    color: var(--Secondary-Text);
+    font-size: 0.7rem;
+}
+
+.search:focus{
+    outline: none;
+    border: 1px solid var(--Primary-Brand);
+}
+
+
+.search::placeholder{
+    background-image: url("./image/icon-search.svg");
+    background-repeat: no-repeat;
+    background-size: 15px;
+    color:var(--Secondary-Text);
+}
+
+
+    .faqs{
+    width:20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--Cards);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.Signup{
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+    background: var(--Secondary);
+    color: var(--Cards);
+    font-size: 0.7rem;
+    border: none;
+    cursor: pointer;
+}
+
+.Signup.active{
+    border: none;
+    background: white;
+    color: black;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.allErrors{
+    border: 1px solid var(--Error);
+    height: 30px;
+    border-radius:5px;
+    background: rgba(190, 21, 21, 0.3);
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    animation: fadeIn 0.5s ease-in-out;
+    transform: translate(-50%, -50%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    display: none;
+
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.allErrors.active{
+    display: flex;
+}
+
+.fineloader{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(20, 20, 20,0.5);
+    display: none;
+}
+
+.fineloader.active{
+    display: flex;
+}
+
+
+.mainloder{
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: white;
+    padding: 12px;
+}
+
+.mainloder p{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.logo2{
+    width: 100%;
+    height: 80%;
+}
+
+.logo2 img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.loader-bar{
+    width:350px;
+    height:12px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.loader-fill{
+    width:0%;
+    height:100%;
+    background:#28a745;
+}
+
+
+
+
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    font-size:0.8rem;
+}
+
+.pap-no{
+    color: var(--Border);
+    font-size: 0.9rem;
+}
+
+
+.main-invoice{
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 210px;
+    padding: 10px;
+    border-radius: 20px;
+    border-top-right-radius: 70px;
+    background: fixed var(--Cards);
+}
+
+.flex:hover{
+    outline: none;
+    border: 1px solid var(--Primary-Brand);
+    width: 230px;
+}
+
+.flex1:hover{
+    outline: none;
+    border: 1px solid var(--Primary-Brand);
+    width: 230px;
+}
+
+.flex input{
+    font-size: 0.8rem;
+    padding: 3px;
+}
+
+.flex input:focus{
+    outline: none;
+    border: 1px solid var(--Primary-Brand);
+}
+
+.flex p{
+    font-size: 0.7rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+
+.flex1 input{
+    font-size: 0.8rem;
+    padding: 3px;
+}
+
+.flex1 input:focus{
+    outline: none;
+    border: 1px solid var(--Primary-Brand);
+}
+
+.flex1 p{
+    font-size: 0.7rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.flex1{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 210px;
+    padding: 10px;
+    border-radius: 20px;
+    border-top-right-radius: 70px;
+    background: fixed var(--Cards);
+}
+
+
+.calc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    padding: 10px;
+    border-radius: 20px;
+    background: fixed var(--Cards);
+}
+
+
+.calc p{
+    font-size: 0.7rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+
+.calc input{
+    font-size: 0.8rem;
+    padding: 3px;
+}
+
+.calc input:focus{
+    outline: none;
+    border: 1px solid var(--Primary-Brand);
+}
+
+
+.generatebtn{
+padding: 3px;
+font-size: 0.8rem;
+font-family: Arial, Helvetica, sans-serif;
+font-weight:550;
+background: var(--card);
+color: var(--Primary-Brand);
+border: none;
+border: 1px solid var(--Primary-Brand);
+}
+
+.generatebtn:hover{
+    background: var(--Primary-Brand);
+    color: var(--Cards);
+    cursor: pointer;
+}
+
+
+
+.calculations{
+    width: 100%;
+    height: 40%;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     background: var(--Background);
+}
+
+
+
+.invoice-input{
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .button-section {
+        width: 85px;
+    }
+    
+    .logo {
+        width: 80px;
+        height: 38px;
+    }
+
+    .invoice {
+        width: 75px;
+        font-size: 0.75rem;
+    }
+
+    .main-invoice {
+        padding: 0 15px;
+        gap: 10px;
+    }
+
+    .flex, .flex1 {
+        width: 180px;
+    }
+    .flex:hover, .flex1:hover {
+        width: 195px;
+    }
+
+    .calc {
+        width: 320px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+   
+    body {
+        flex-direction: column;
+        height: auto;
+    }
+
+    
+    .button-section {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 15px;
+        gap: 0;
+        display:none;
+    }
+
+    .button-section.active{
+        display: block;
+    }
+    .sub{display: block;}
+
+    
+    .logo {
+        border-bottom-right-radius: 0px;
+        height: 35px;
+        width: auto;
+    }
+
+    .main {
+        height: auto;
+    }
+
+    .nav-list {
+        padding: 10px 15px;
+    }
+
+    
+    .search {
+        width: 130px;
+    }
+
+    
+    .main-invoice, 
+    .calculations {
+        flex-direction: column;
+        height: auto;
+        padding: 30px 15px;
+        gap: 1.5rem;
+    }
+
+    
+    .flex, 
+    .flex1, 
+    .calc {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    
+    .flex:hover, 
+    .flex1:hover {
+        width: 100%; 
+    }
+
+   
+    .calc {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+    }
+
+    .calc input {
+        width: 100%;
+    }
+
+   
+    .mainloder {
+        width: 90%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .loader-bar {
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+    .main-invoice, 
+    .calculations {
+        max-width: 1200px;
+        margin: 0 auto; 
+    }
+}
+
+
+
+

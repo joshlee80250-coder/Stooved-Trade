@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inpreciept</title>
+    <link rel="stylesheet" href="inpreciept.css">
+</head>
+<body>
+
+    <div class="button-section">
+    <div class="logo"><img src="image/ChatGPT Image Jul 1, 2026, 10_50_34 AM.png" alt="logo"></div>
+
+
+    <div class="fineloader">
+
+    <div class="mainloder">
+        <div class="logo2"><img src="image/loadimg.png" alt="trater loader"></div>
+        <p class="t1">Generating Invoice....</p>
+        <div class="loader-container">
+    <div class="loader-bar">
+        <div class="loader-fill" id="loaderFill"></div>
+    </div>
+
+    <p id="percent">0%</p>
+</div>
+    </div>
+
+</div>
+
+    <div class="line l1">
+    <button class="invoice inv ">Invoice</button>
+    </div>
+    
+    <div class="line l2 active">
+    <button class="invoice Receipt active">Receipt</button>
+    </div>
+
+        
+    <div class="line l3 ">
+    <button class="invoice Calculator">Calculator</button>
+    </div>
+
+    
+    <div class="line l4">
+    <button class="invoice Converter">Converter</button>
+    </div>
+
+    
+    <div class="line l5">
+    <button class="invoice Sales">Sales list</button>
+    </div>
+
+        
+    <div class="line l6">
+        <button class="invoice games">Games</button>
+    </div>
+    
+    
+</div>
+<div class="width">
+    <div class="title">
+    <h4>Create Your Reciept</h4>
+     <div class="allErrors">Error</div>
+    <button class="generatebtn">
+        Generate Receipt
+    </button>
+    </div>
+    <div class="main">
+
+    
+        
+        <div class="main-invoice">
+            <div>
+                
+         <div class="full">              
+                <div class="flex">
+                    
+                    <h3>Receipt Information</h3><br>
+
+                        <div class="invoice-input">
+
+                            <p>Reciept no</p>
+                                <input type="text" class="inputReceiptNo" placeholder="Receipt No (e.g. RCT-001)">
+                        </div>
+
+                        <div class="invoice-input">
+                             <p>Reciept Date</p>
+                                 <input type="date" class="inputDate">
+
+                        </div>
+                 </div>
+
+                <div class="flex1">
+
+                     <div>
+
+                            <div class="invoice-input">
+                                <p>User Name</p>
+                                    <input type="text" class="inputCustomerName" placeholder="Customer Name">
+
+                            </div>
+
+
+                            <div class="invoice-input">
+
+                                 <p>User PhoneNo</p>
+                                    <input type="text" class="inputCustomerPhone" placeholder="Customer Phone">
+
+                            </div>
+
+                </div>
+            </div>
+</div>
+
+
+<div class="calculations">
+
+    <div class="calc">
+
+         <div>
+
+            <div class="flex">
+
+        <div class="invoice-input">
+            <p>Service</p>
+
+             <input type="text" id="inputDescription" placeholder="Service Description">
+        </div>
+
+        <div class="invoice-input">
+            <p>Quantity</p>
+
+             <input type="number" id="inputQty" placeholder="Quantity">
+        </div>
+
+          </div>
+            </div>
+
+            <div class="flex1">
+        <div class="invoice-input">
+            <p>Amount</p>
+    
+             <input type="number" id="inputAmount" placeholder="Amount">
+        </div>
+
+        <div class="invoice-input">
+            <p>Discount</p>
+    
+             <input type="number" id="inputDiscount" placeholder="Discount" value="0">
+
+        </div>
+    </div>
+</div>
+
+        </div>
+
+    
+    </div>
+    </div>
+
+    </div>    
+</div>
+<script src="inpreciept.js"></script>
+</body>
+</html>

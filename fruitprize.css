@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+    margin-top:6rem;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#10B981;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+
+}
+
+.Exit{
+    width:70px;
+    background: red;
+    color: white;
+}
+
+.Exit:hover{
+    background-color: white;
+    color:red;
+}
+
+
+
+
+
+.game{
+
+    background:white;
+    width:360px;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+}
+
+#emoji{
+
+    font-size:80px;
+    margin:10px;
+
+}
+
+button{
+
+    width:100%;
+    padding:15px;
+    margin:8px 0;
+    border:none;
+    border-radius:8px;
+    background:#10B981;
+    color:white;
+    cursor:pointer;
+    font-size:17px;
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#059669;
+
+}
+
+.correct{
+
+    background:#16A34A !important;
+
+}
+
+.wrong{
+
+    background:#DC2626 !important;
+
+}
+
+#result{
+
+    font-size:20px;
+    font-weight:bold;
+    height:30px;
+
+}
+
+#nextBtn{
+
+    background:#1E3A8A;
+
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        margin-top: 4rem;
+        height: auto;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .game {
+        width: 400px;
+        padding: 35px;
+    }
+
+    #emoji {
+        font-size: 90px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        margin-top: 2rem;
+        height: auto;
+        min-height: 100vh;
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    .game {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,.15);
+    }
+
+    #emoji {
+        font-size: 70px;
+        margin: 5px;
+    }
+
+    button {
+        padding: 14px;
+        font-size: 16px;
+        margin: 6px 0;
+    }
+
+    #result {
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    .Exit {
+        width: 100%;
+        margin-top: 15px;
+    }
+}

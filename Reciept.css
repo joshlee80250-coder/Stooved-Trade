@@ -1,0 +1,359 @@
+body{
+
+    background:#eceff3;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+#receipt{
+
+    width:420px;
+
+    background:white;
+
+    margin:40px auto;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    box-shadow:0 0 15px rgba(0,0,0,.15);
+
+}
+
+.header{
+
+    text-align:center;
+
+}
+
+.header h1{
+
+    margin:0;
+
+    color:#28a745;
+
+}
+
+.header p{
+
+    margin:4px;
+
+    font-size:14px;
+
+}
+
+.title{
+
+    text-align:center;
+
+    color:#444;
+
+    margin:25px 0;
+
+}
+
+.details{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:20px;
+
+    font-size:14px;
+
+}
+
+.customer{
+
+    margin-bottom:20px;
+
+}
+
+.customer p{
+
+    margin:5px 0;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-bottom:20px;
+
+}
+
+table th{
+
+    background:#28a745;
+
+    color:white;
+
+    padding:10px;
+
+}
+
+table td{
+
+    border:1px solid #ddd;
+
+    padding:10px;
+
+    text-align:center;
+
+}
+
+.summary{
+
+    margin-top:20px;
+
+}
+
+.summary div{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin:8px 0;
+
+}
+
+.grand{
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    color:#28a745;
+
+    border-top:2px solid #ddd;
+
+    padding-top:10px;
+
+}
+
+.footer{
+
+    text-align:center;
+
+    margin-top:30px;
+
+    font-size:14px;
+
+    color:#555;
+
+}
+
+button{
+
+    display:block;
+
+    margin:20px auto;
+
+    padding:12px 30px;
+
+    border:none;
+
+    background:#28a745;
+
+    color:white;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+button:hover{
+
+    background:#28a745;
+
+}
+
+
+
+
+.popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.5);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.popup-content{
+    width:320px;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    animation:pop .3s ease;
+}
+
+.check{
+    font-size:55px;
+    color:#28a745;
+}
+
+.popup-content button{
+    margin-top:15px;
+    padding:10px 25px;
+    border:none;
+    background:#28a745;
+    color:#fff;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+@keyframes pop{
+    from{
+        transform:scale(.7);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.popup.active{
+    display:flex;
+}
+
+
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    #invoice {
+        width: 95%;
+        padding: 30px;
+        margin: 20px auto;
+    }
+
+    .invoice-header h1 {
+        font-size: 28px;
+    }
+
+    table th, 
+    table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .summary {
+        width: 250px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        height: auto;
+    }
+
+    #invoice {
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .invoice-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .invoice-header h1 {
+        font-size: 26px;
+    }
+
+    .invoice-info {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .customer-details {
+        margin: 20px 0;
+        font-size: 14px;
+    }
+
+    table, 
+    thead, 
+    tbody, 
+    th, 
+    td, 
+    tr {
+        display: block;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tr {
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        margin-bottom: 12px;
+        padding: 8px;
+        background: white;
+    }
+
+    table td {
+        text-align: right;
+        padding: 8px 5px;
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    table td:last-child {
+        border-bottom: none;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #444;
+        text-align: left;
+    }
+
+    .summary {
+        width: 100%;
+        margin-top: 25px;
+        font-size: 16px;
+    }
+
+    .footer {
+        margin-top: 35px;
+        font-size: 12px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .popup-content {
+        width: 90%;
+        max-width: 320px;
+        padding: 20px;
+    }
+}
