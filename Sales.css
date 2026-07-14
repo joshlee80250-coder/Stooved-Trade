@@ -335,3 +335,30 @@ table td{
         font-size: 15px;
     }
 }
+
+
+
+@media screen and (max-width: 414px) {
+
+    .button-section {
+        width:140px;
+        height:100%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 15px;
+        gap: 0;
+        position: absolute;
+        top: 40px;
+        opacity: 0;
+        transition: 1s infinite;
+    }
+
+    .button-section.active{
+        opacity: 1;
+        display: block;
+    }
+    
+    .sub{display: block;}
+
+}
