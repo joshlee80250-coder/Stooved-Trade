@@ -150,11 +150,15 @@ games.addEventListener('click',()=>{
     l6.classList.add('active');
 
     window.location.href='Game.html';
-
-
+    
+    
 })
 
 
+document.querySelector('.sub').addEventListener('click', function(){
+    document.querySelector('.button-section').classList.toggle('active')
+    
+})
 
 const firstInput=document.getElementById('firstnum');
 const secondInput=document.getElementById('secondnum');
@@ -302,7 +306,6 @@ firstInputr.addEventListener('input',handleCalculatio)
 
 clicks.addEventListener('click',handleCalculation);
 firstInputs.addEventListener('input',handleCalculation)
-
 
 
 

@@ -464,17 +464,21 @@ border: 1px solid var(--Primary-Brand);
 
     
     .button-section {
-        width: 100%;
-        height: auto;
+        width:140px;
+        height:100%;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
         padding: 10px 15px;
         gap: 0;
-        display:none;
+        position: absolute;
+        top: 40px;
+        opacity: 0;
+        transition: 1s infinite;
     }
 
     .button-section.active{
+        opacity: 1;
         display: block;
     }
     .sub{display: block;}
@@ -492,6 +496,10 @@ border: 1px solid var(--Primary-Brand);
 
     .nav-list {
         padding: 10px 15px;
+    }
+
+    .nav-list.active{
+        display: none;
     }
 
     

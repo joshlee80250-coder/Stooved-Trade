@@ -163,6 +163,7 @@ games.addEventListener('click',()=>{
 
 document.querySelector('.sub').addEventListener('click', function(){
     document.querySelector('.button-section').classList.toggle('active')
+    document.querySelector('.nav-list').classList.toggle('active')
     
 })
 

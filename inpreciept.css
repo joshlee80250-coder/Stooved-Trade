@@ -28,6 +28,16 @@ body {
     height: 100vh;
 }
 
+.sub{
+    width: 20px;
+    height:50px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color:black;
+    cursor: pointer;
+    display: none;
+}
 
 .button-section {
     width: 104px;
@@ -244,13 +254,31 @@ body {
 
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-    .button-section {
-        width: 85px;
+
+
+     .button-section {
+        width:140px;
+        height:100%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 15px;
+        gap: 0;
+        position: absolute;
+        top: 40px;
+        opacity: 0;
+        transition: 1s infinite;
     }
 
+    .button-section.active{
+        opacity: 1;
+        display: block;
+    }
+    .sub{display: block;}
+
     .logo {
-        width: 80px;
-        height: 38px;
+        width: 120px;
+        height: 50px;
     }
 
     .invoice {
@@ -261,6 +289,10 @@ body {
     .main-invoice {
         width: 380px;
         padding: 15px;
+    }
+
+    .title{
+        margin-bottom: 2rem;
     }
 
     .invoice-input input {

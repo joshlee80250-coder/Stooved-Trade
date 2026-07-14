@@ -79,6 +79,12 @@ const l5=document.querySelector('.l5');
 const l6=document.querySelector('.l6');
 
 
+document.querySelector('.sub').addEventListener('click', function(){
+    document.querySelector('.button-section').classList.toggle('active')
+    document.querySelector('.nav-list').classList.toggle('active')
+    
+})
+
 
 
 rec.addEventListener('click',()=>{

@@ -8,6 +8,17 @@
     align-items: center;
 }
 
+.sub{
+    width: 20px;
+    height:50px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color:black;
+    cursor: pointer;
+    display: none;
+}
+
 .invoice{
     font-size: 0.8rem;
     background: var(--Primary-Brand);
@@ -213,8 +224,24 @@ body {
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
     .button-section {
-        width: 85px;
+        width:140px;
+        height:100%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 15px;
+        gap: 0;
+        position: absolute;
+        top: 40px;
+        opacity: 0;
+        transition: 1s infinite;
     }
+
+    .button-section.active{
+        opacity: 1;
+        display: block;
+    }
+    .sub{display: block;}
 
     .logo {
         width: 80px;

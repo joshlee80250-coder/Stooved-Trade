@@ -77,6 +77,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 100); 
     }
 
+
+    document.querySelector('.sub').addEventListener('click', function(){
+    document.querySelector('.button-section').classList.toggle('active')
+    document.querySelector('.nav-list').classList.toggle('active')
+    
+})
+
+
     generateBtn.addEventListener("click", () => {
         errorBox.style.display = "none";
         errorBox.textContent = "";
